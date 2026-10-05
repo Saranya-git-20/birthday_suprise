@@ -1,0 +1,814 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #fff0f5,
+            #ffe1eb,
+            #ffd1df
+        );
+
+    color: #4a2632;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav {
+
+    width: 100%;
+
+    padding: 20px 7%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    position: relative;
+
+    z-index: 10;
+}
+
+
+.logo {
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 30px;
+
+    color: #b8325e;
+}
+
+
+.nav-links {
+
+    display: flex;
+
+    gap: 30px;
+}
+
+
+.nav-links a {
+
+    text-decoration: none;
+
+    color: #70263d;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+
+.nav-links a:hover {
+
+    color: #d83c6b;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    min-height: 78vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    position: relative;
+}
+
+
+.hero-content {
+
+    max-width: 800px;
+
+    z-index: 2;
+}
+
+
+.small-title {
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+
+    color: #9c405d;
+
+    margin-bottom: 15px;
+}
+
+
+.hero h1 {
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: clamp(65px, 10vw, 120px);
+
+    line-height: 0.9;
+
+    color: #b52f5c;
+
+    margin-bottom: 30px;
+
+    text-shadow: 2px 4px 15px rgba(181, 47, 92, 0.15);
+}
+
+
+.subtitle {
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    color: #71384a;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.surprise-btn {
+
+    border: none;
+
+    padding: 15px 30px;
+
+    border-radius: 50px;
+
+    background: linear-gradient(
+        135deg,
+        #d6336c,
+        #a61e4d
+    );
+
+    color: white;
+
+    font-size: 15px;
+
+    font-family: "Poppins", sans-serif;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(166, 30, 77, 0.25);
+
+    transition: 0.3s;
+}
+
+
+.surprise-btn:hover {
+
+    transform: translateY(-4px) scale(1.03);
+
+    box-shadow:
+        0 15px 30px rgba(166, 30, 77, 0.35);
+}
+
+
+/* =========================
+   CAKE
+========================= */
+
+.cake {
+
+    position: absolute;
+
+    right: 8%;
+
+    bottom: 15%;
+
+    font-size: 100px;
+
+    animation: floating 3s ease-in-out infinite;
+}
+
+
+@keyframes floating {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+
+/* =========================
+   HIDDEN MESSAGE
+========================= */
+
+.hidden-message {
+
+    display: none;
+
+    margin-top: 35px;
+
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.6);
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+
+    border-radius: 25px;
+
+    backdrop-filter: blur(10px);
+
+    animation: appear 0.8s ease;
+}
+
+
+.hidden-message.show {
+
+    display: block;
+}
+
+
+.hidden-message h2 {
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 40px;
+
+    color: #b52f5c;
+
+    margin-bottom: 15px;
+}
+
+
+.hidden-message p {
+
+    margin-bottom: 10px;
+
+    line-height: 1.7;
+}
+
+
+.hidden-message span {
+
+    display: block;
+
+    margin-top: 20px;
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 30px;
+
+    color: #b52f5c;
+}
+
+
+@keyframes appear {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================
+   QUOTE
+========================= */
+
+.quote-section {
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    background: rgba(255, 255, 255, 0.25);
+}
+
+
+.quote-section p {
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 40px;
+
+    color: #9f2d51;
+}
+
+
+.quote-section span {
+
+    font-size: 14px;
+
+    color: #744052;
+}
+
+
+/* =========================
+   PAGE HEADER
+========================= */
+
+.page-header {
+
+    text-align: center;
+
+    padding: 80px 20px 40px;
+}
+
+
+.page-header p {
+
+    color: #a04461;
+
+    margin-bottom: 10px;
+}
+
+
+.page-header h1 {
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 65px;
+
+    color: #b52f5c;
+}
+
+
+/* =========================
+   MEMORY CARDS
+========================= */
+
+.memory-container {
+
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 30px;
+
+    padding: 30px 0 70px;
+}
+
+
+.memory-card {
+
+    background: rgba(255, 255, 255, 0.65);
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 40px rgba(120, 35, 65, 0.12);
+
+    transition: 0.4s;
+}
+
+
+.memory-card:hover {
+
+    transform: translateY(-8px) rotate(0.5deg);
+
+    box-shadow:
+        0 20px 50px rgba(120, 35, 65, 0.18);
+}
+
+
+.memory-card img {
+
+    width: 100%;
+
+    height: 300px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.memory-content {
+
+    padding: 25px;
+}
+
+
+.memory-content h2 {
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 35px;
+
+    color: #a82f56;
+
+    margin-bottom: 10px;
+}
+
+
+.memory-content p {
+
+    line-height: 1.7;
+
+    font-size: 14px;
+
+    color: #704052;
+}
+
+
+/* =========================
+   MEMORY END
+========================= */
+
+.memory-ending {
+
+    text-align: center;
+
+    padding: 50px 20px 90px;
+}
+
+
+.memory-ending h2 {
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 42px;
+
+    color: #a72f55;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   LETTER
+========================= */
+
+.letter-page {
+
+    display: flex;
+
+    justify-content: center;
+
+    padding: 70px 20px 100px;
+}
+
+
+.letter-card {
+
+    width: 100%;
+
+    max-width: 800px;
+
+    padding: 55px;
+
+    background:
+        rgba(255, 255, 255, 0.78);
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 60px rgba(110, 30, 55, 0.15);
+}
+
+
+.envelope-icon {
+
+    font-size: 55px;
+
+    margin-bottom: 10px;
+}
+
+
+.letter-small {
+
+    color: #a04461;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+}
+
+
+.letter-card h1 {
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 65px;
+
+    color: #ae2e56;
+
+    margin: 10px 0 35px;
+}
+
+
+.letter-content {
+
+    text-align: left;
+
+    font-family: Georgia, serif;
+
+    font-size: 17px;
+
+    line-height: 2;
+
+    color: #59313e;
+}
+
+
+.letter-content p {
+
+    margin-bottom: 18px;
+}
+
+
+.special-line {
+
+    text-align: center;
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 35px;
+
+    color: #b52f5c;
+
+    margin: 30px 0 !important;
+}
+
+
+.signature {
+
+    text-align: right;
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 27px;
+
+    margin-top: 35px;
+}
+
+
+.signature span {
+
+    color: #b52f5c;
+
+    font-size: 35px;
+}
+
+
+/* =========================
+   FINAL SURPRISE
+========================= */
+
+.final-message {
+
+    display: none;
+
+    margin-top: 30px;
+
+    padding: 30px;
+
+    background: #fff0f5;
+
+    border-radius: 25px;
+
+    animation: appear 0.8s ease;
+}
+
+
+.final-message.show {
+
+    display: block;
+}
+
+
+.final-message h2 {
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 55px;
+
+    color: #b52f5c;
+}
+
+
+.big-heart {
+
+    font-size: 70px;
+
+    animation: heartbeat 1s infinite;
+}
+
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.hearts {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 1;
+}
+
+
+.heart {
+
+    position: absolute;
+
+    bottom: -30px;
+
+    font-size: 18px;
+
+    animation:
+        heartFloat 6s linear forwards;
+
+    opacity: 0.7;
+}
+
+
+@keyframes heartFloat {
+
+    from {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    15% {
+
+        opacity: 0.7;
+    }
+
+    to {
+
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    text-align: center;
+
+    padding: 25px;
+
+    color: #8a4057;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    nav {
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .nav-links {
+
+        gap: 15px;
+    }
+
+
+    .hero {
+
+        min-height: 75vh;
+    }
+
+
+    .cake {
+
+        position: relative;
+
+        right: auto;
+
+        bottom: auto;
+
+        margin-top: 30px;
+
+        font-size: 70px;
+    }
+
+
+    .memory-container {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .page-header h1 {
+
+        font-size: 50px;
+    }
+
+
+    .letter-card {
+
+        padding: 30px 22px;
+    }
+
+
+    .letter-card h1 {
+
+        font-size: 50px;
+    }
+
+
+    .letter-content {
+
+        font-size: 15px;
+
+        line-height: 1.8;
+    }
+
+
+    .quote-section p {
+
+        font-size: 30px;
+    }
+
+}
